@@ -35,11 +35,15 @@ void draw() {
   img.loadPixels(); 
   
   /* Inicializamos las Matrices Contenedoras */
-  float [][] MatrizRojo = new float[width][height]; float [][] MatrizVerde = new float[width][height]; float [][] MatrizAzul = new float[width][height];
+  float [][] matrizRojo = new float[width][height]; float [][] matrizVerde = new float[width][height]; float [][] matrizAzul = new float[width][height];
+  float [][] NDVI = new float [width][height];
   float r = 0; float g = 0; float b = 0;
   
   /* Llamamos a la función colores para obtener las componentes de color de cada pixel */
-  colores(img,r,g,b,MatrizRojo,MatrizVerde,MatrizAzul);
+  colores(img,r,g,b,matrizRojo,matrizVerde,matrizAzul);
+  
+  /* Llamamos a la función NDVI para calcular el Índice de Vegetación */
+  NDVI = ndvi(matrizRojo,matrizAzul,NDVI);
   
   /* Carga los pixels tratados antes */
   updatePixels();
