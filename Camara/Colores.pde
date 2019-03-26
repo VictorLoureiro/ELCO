@@ -10,20 +10,17 @@ void colores(PImage img, float r, float g ,float b, float [][] MatrizRojo,float 
        /* Guardamos la componente ROJA */
        r = red(img.pixels[loc]); g = green(0); b = blue(0);
        MatrizRojo[x][y] = r;
-       /* Carga los pixels rojos en el display */
-       pixels[loc] =  color(r,g,b); //Descomentar si queremos sacar este mapa
+       //pixels[loc] =  color(r,g,b); //Descomentar si queremos cargar los pixels rojos en el display
        
        /* Guardamos la componente VERDE */
        r = red(0); g = green(img.pixels[loc]); b = blue(0);
        MatrizVerde[x][y] = g;
-       /* Carga los pixels verdes en el display */
-       //pixels[loc] =  color(r,g,b); //Descomentar si queremos sacar este mapa
+       //pixels[loc] =  color(r,g,b); //Descomentar si queremos cargar los pixels verdes en el display
        
        /* Guardamos la componente AZUL */
        r = red(0); g = green(0); b = blue(img.pixels[loc]);
        MatrizAzul[x][y] = b;
-       /* Carga los pixels azules en el display */
-       //pixels[loc] =  color(r,g,b); //Descomentar si queremos sacar este mapa 
+       //pixels[loc] =  color(r,g,b); //Descomentar si queremos cargar los pixels azules en el display 
     }
   }
 }

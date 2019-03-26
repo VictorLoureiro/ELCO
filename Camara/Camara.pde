@@ -42,7 +42,7 @@ void draw() {
   /* Llamamos a la función colores para obtener las componentes de color de cada pixel */
   colores(img,r,g,b,matrizRojo,matrizVerde,matrizAzul);
   
-  /* Llamamos a la función NDVI para calcular el Índice de Vegetación */
+  /* Llamamos a la función NDVI para calcular el Índice de Vegetación en cada pixel*/
   NDVI = ndvi(matrizRojo,matrizAzul,NDVI);
   
   /* Carga los pixels tratados antes */
