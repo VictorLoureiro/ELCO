@@ -36,15 +36,23 @@ void draw() {
   
   /* Inicializamos las Matrices Contenedoras */
   float [][] matrizRojo = new float[width][height]; float [][] matrizVerde = new float[width][height]; float [][] matrizAzul = new float[width][height];
-  float [][] NDVI = new float [width][height];
+  float [][] NDVI = new float [width][height]; float NDVIMedio;
   float r = 0; float g = 0; float b = 0;
   
-  /* Llamamos a la función colores para obtener las componentes de color de cada pixel */
+  /* Obtenemos las componentes de color RGB de cada pixel */
   colores(img,r,g,b,matrizRojo,matrizVerde,matrizAzul);
   
-  /* Llamamos a la función NDVI para calcular el Índice de Vegetación en cada pixel*/
+  /* Calculamos el Índice de Vegetación NDVI en cada pixel*/
   NDVI = ndvi(matrizRojo,matrizAzul,NDVI);
+  
+  /* Calculamos el NDVI Medio correspondiente a la zona de vegetación */
+  NDVIMedio = NDVIMedio(NDVI);
   
   /* Carga los pixels tratados antes */
   updatePixels();
+  
+  /* Indicamos el NDVIMedio */
+  textSize(28);
+  text("NDVI Medio: " + NDVIMedio,width-350,height-15);
+  fill(0); //Color Negro (RGB)
 }

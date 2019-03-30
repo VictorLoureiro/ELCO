@@ -1,4 +1,3 @@
-import processing.video.*;
 
 float [][] ndvi (float[][] MatrizRojo, float [][] MatrizAzul, float[][] NDVI){
   
@@ -21,7 +20,7 @@ float [][] ndvi (float[][] MatrizRojo, float [][] MatrizAzul, float[][] NDVI){
       if(NDVI[x][y]<=1 && NDVI[x][y]>0)
         pixels[loc]=color(r,255,0);
       else 
-        pixels[loc]=color(255,g,0);
+        pixels[loc]=color(255,g,0);   
         
     }
   }
