@@ -3,6 +3,7 @@
 
    background(255, 255, 255);  // Color de fondo pantalla
 
+
     camara(cam,img);
 
     update(mouseX, mouseY);  // Llamamos a la función update para que actualize posición del mouse
@@ -91,36 +92,49 @@
       if(IF_Sensores){  // Si la variable "IF_Sensores" está activa (true)
         CAMARA=false;
         SENSORES=true;
-        setupDone=0;
-        cam.stop();
+         // Por si coincide con una medida periodica
+          if(!NDVIperiodico){
+            setupDone=0;
+            cam.stop();
+          }
+          
         IF_Sensores=false;
       }  
       
       if(IF_Historial){  // Si la variable "IF_Historial" está activa (true)
         CAMARA=false;
         HISTORIAL=true;
-        setupDone=0;
-        cam.stop();
+         // Por si coincide con una medida periodica
+          if(!NDVIperiodico){
+            setupDone=0;
+            cam.stop();
+          }
+        
         IF_Historial=false;
       }
         
       if(IF_About){  // Si la variable "IF_About" está activa (true)
         CAMARA=false;
         ABOUT=true;
-        setupDone=0;
-        cam.stop();
+         // Por si coincide con una medida periodica
+          if(!NDVIperiodico){
+            setupDone=0;
+            cam.stop();
+          }
+          
         IF_About=false;
       }
       
-
-
-  
-  // Escritura de la fecha y hora
+// Escritura de la fecha y hora
   fill(31, 125, 222);  // Determinamos color de la letra
   textFont(font22);  // Determinamos tipo de fuente
   text(curr_date, 25, 30);  // Imprimimos el contenido de la variable y lo posicionamos
   text(curr_time, 250, 30);  // Imprimimos el contenido de la variable y lo posicionamos
   
+  
+
+  
+
   
   }
       

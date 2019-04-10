@@ -18,14 +18,17 @@ float [][] ndvi (float[][] MatrizRojo, float [][] MatrizAzul, float[][] NDVI){
       /* Por ello el VERDE varía de 255 a 0 para un NDVI de 0 a -1 */
       float g = 255*(NDVI[x][y]+1)/(2);
       
-      
-      if(x<50||x>649||y<50||y>429){
-        pixels[loc]=color(255,255,255);
-      }else if(NDVI[x][y]<=1 && NDVI[x][y]>0){
-        pixels[loc]=color(r,255,0);
-      }else {
-        pixels[loc]=color(255,g,0); 
-      } 
+      if(!NDVIperiodico || CAMARA){
+        
+          if(x<40||x>639||y<50||y>429){
+            pixels[loc]=color(255,255,255);
+          }else if(NDVI[x][y]<=1 && NDVI[x][y]>0){
+            pixels[loc]=color(r,255,0);
+          }else {
+            pixels[loc]=color(255,g,0); 
+          } 
+          
+      }
     }
   }
   

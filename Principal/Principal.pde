@@ -1,11 +1,19 @@
 import processing.video.*;
+import processing.core.*;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
   int[] PC_Time = new int[3];  // Variable para registrar la hora
   int[] DD_MM_YY = new int[3];  // Variable para registrar la fecha
-  PFont font12, font22, font44;  // Declaración de los textos a usar
-  String curr_time, curr_date, row_data, filename, textoInforD="";  // Variables para obtención de tiempo, hora, texto informativo inferior y nombre log
-  
+  PFont font12, font22, font44, font140;  // Declaración de los textos a usar
+  String curr_time, curr_date;  // Variables para obtención de tiempo, hora, texto informativo inferior y nombre log
+  PImage logo;  // Creamos un objeto para cargar una imagen 
+
+  // Creación archivo de texto
+   String outFilename = "data.txt";
+    
+
   
   // Datos Botones
   
@@ -22,18 +30,26 @@ import processing.video.*;
   
   color rectColor, baseColor;
   color rectHighlight;
+  
+  // Datos nombres ABOUT
+    int nombresX, nombresY;      // Position of Names Text
+
+  float NDVIMedio;
+
+
 
   /* FLAGS */
 
-int setupDone=0;
+  int setupDone=0;
   
   
   
     /* Flags de la intefaz */
+  boolean INICIO=true;         // FLAG Pantalla Inicio
   boolean CAMARA=false;         // FLAG Pantalla Camara
   boolean SENSORES=false;       // FLAG Pantalla Sensores
   boolean HISTORIAL=false;      // FLAG Pantalla Historial
-  boolean ABOUT=true;          // FLAG Pantalla About
+  boolean ABOUT=false;          // FLAG Pantalla About
   boolean rectOver1=false;      // Variable botón Camara
   boolean rectOver2=false;      // Variable botón Sensores
   boolean rectOver3=false;      // Variable botón Historial
@@ -53,6 +69,15 @@ int setupDone=0;
   boolean luz = true;
   
   /* Flags de los sensores */
+  boolean NDVIperiodico = false;
+  
+  /* Flags mediciones */
+  
+  boolean medidoTemp = false;
+  boolean medidoHum = false;
+  boolean medidoLight = false;
+  boolean medidoNDVI = false;
+
   
   /* Cámara */
 
@@ -60,10 +85,26 @@ int setupDone=0;
 void setup() {
     
   /* SETUP INTERFAZ */
-  size(800, 480);  // Creamos interface del tamaño máximo de la pantalla
+  
+  // Creamos interface del tamaño máximo de la pantalla
+  size(800, 480);  
+  
+  // Creamos la PImage del logo
+  logo=loadImage("logo.jpg");  // Cargamos imagen en la varibale
+
+  // Creamos las fuentes que vamos a usar
   font12 = loadFont("Monospaced-12.vlw");
   font22 = loadFont("Monospaced-22.vlw");  // Cargamos estilo de letra
   font44 = loadFont("Monospaced-32.vlw");  // Cargamos estilo de letra
+  font140 = loadFont("Avenir-Light-140.vlw");  // Cargamos estilo de letra
+  
+  // Creación archivo de texto
+   // log = new Log("datos.txt");  
+  
+  /* SETUP POSICIONES ABOUT */
+  nombresX = 450;
+  nombresY = 350;
+  
   
   
   /* SETUP BOTONES */
@@ -118,7 +159,11 @@ void setup() {
     cam.start();     
   }  
   */
-  /* SETUP  */
+  /* SETUP GRAFICA */
+  //createGraphics(300, 300, P2D, path)
+  
+  
+  
 }
 
 void draw() {
@@ -129,10 +174,16 @@ void draw() {
   curr_time = PC_Time();  // Cargamos en la variable el valor obtenido al llamar la función "PC_Time()"
   curr_date = PC_Date();  // Cargamos en la variable el valor obtenido al llamar la función "PC_Date()"
   
-  
+    
   /* INTERFAZ */  
   
+  MEDIDA_PERIODICA();
+  MEDIDA_PERIODICA_NDVI();
 
+
+  if (INICIO){
+     INICIO();
+  }else
   
   if (CAMARA){
     

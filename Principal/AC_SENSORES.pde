@@ -5,7 +5,7 @@
 
     update(mouseX, mouseY);  // Llamamos a la función update para que actualize posición del mouse
 
-     
+     graficaNDVI();
     
   // BOTON CAMARA
   
