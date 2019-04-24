@@ -30,14 +30,23 @@ void setup()
   configureSensor();
 }
 
-
-
+uint16_t calcLux() {
+  // More advanced data read example. Read 32 bits with top 16 bits IR, bottom 16 bits full spectrum
+  // That way you can do whatever math and comparisons you want!
+  uint32_t lum = tsl.getFullLuminosity();
+  uint16_t ir, full, lux;
+  ir = lum >> 16;
+  full = lum & 0xFFFF;
+  // Lux values from 0 to 65535
+  lux = tsl.calculateLux(full, ir);
+  return lux;
+}
 
 void loop()
 {
   char valor = 0;     // usamos una constante tipo char, ya
-                       // que van a ser letras los caracteres
-                       // que se van a enviar
+  // que van a ser letras los caracteres
+  // que se van a enviar
   if (Serial.available() > 0) // se abre el puerto serial
     // leyendo los datos de entrada
   {
@@ -50,13 +59,11 @@ void loop()
       // Sesor DHT: Humedad y Temperatura
       float h = dht.readHumidity();
       float t = dht.readTemperature();
+      
+      //Medida en luxs del sensor de luz
+      uint16_t lux;
+      lux = calcLux();
 
-      // Sensor de luz
-      uint16_t l = tsl.getLuminosity(TSL2591_VISIBLE);
-      int ldec = l;
-      float lux = ((float)ldec / (65535)) * 100;
-
-      if ( lux < 0 ) lux = 0;
 
       if (isnan(h) || isnan(t))
       {
