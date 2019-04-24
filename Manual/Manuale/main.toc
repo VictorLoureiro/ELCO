@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n al Sistema Planthy}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Qu\IeC {\'e} es Planthy?}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Organizaci\IeC {\'o}n del manual}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Arquitectura general del sistema}{5}{section.2}
+\contentsline {section}{\numberline {3}Sensores y disposidivos utilizados}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Arduino}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Raspberry Pi}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Sensor de humedad y temperatura}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Sensor de luz}{8}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Bomba de agua}{9}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}C\IeC {\'a}mara}{9}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Pantalla}{10}{subsection.3.7}
+\contentsline {section}{\numberline {4}Utilizando Planthy}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Interfaz grafica}{11}{subsection.4.1}
+\contentsline {section}{\numberline {5}An\IeC {\'a}lisis de costos}{15}{section.5}
+\contentsline {section}{\numberline {6}Links}{16}{section.6}
+\contentsline {subsection}{\numberline {6.1}DHT11 Temperature and Relative Humidity Sensor Module for arduino:}{16}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Sensor luz Fotoresistencia para Arduino:}{16}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}M\IeC {\'o}dulo RGB:}{16}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Sensor de agua}{16}{subsection.6.4}
