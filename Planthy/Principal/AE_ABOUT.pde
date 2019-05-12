@@ -86,8 +86,8 @@
   text("Francesco Inchingolo", nombresX, nombresY + 100);
   
   //Logos UPM y ETSIT
-  image(logoUPM, 50, 50, 300, 400);
-  image(logoETSIT, 350, 150, 300, 100);
-
-  
+  image(logoETSIT, 30, 50, 350, 120);
+  image(logoTFB, 30, 190, 350, 120);
+  image(logoPHOTONPEDIA, 30, 330, 350, 145);
+  image(logoUPM, 410, -20, 250, 430);
   }

@@ -19,13 +19,13 @@ import meter.*;
   float tempActual = 0;                                        //Variable de temperatura
   float humActual = 0;                                         //Variable de humedad
   float lightActual = 0;                                       //Variable de luminosidad
-  float luxActual = 0;                                       //Variable de luminosidad
+  float luxActual = 0;                                         //Variable de luminosidad
 
-  int[] PC_Time = new int[3];                            // Variable para registrar la hora
-  int[] DD_MM_YY = new int[3];                           // Variable para registrar la fecha
-  PFont font1, font2, font12, font22, font44, font140, font10;   // Declaración de los textos a usar
-  String curr_time, curr_date;                           // Variables para obtención de tiempo, hora, texto informativo inferior y nombre log
-  PImage logoPLANTHY, logoUPM, logoETSIT;                                           // Creamos un objeto para cargar una imagen 
+  int[] PC_Time = new int[3];                                        // Variable para registrar la hora
+  int[] DD_MM_YY = new int[3];                                       // Variable para registrar la fecha
+  PFont font1, font2, font12, font22, font44, font140, font10;       // Declaración de los textos a usar
+  String curr_time, curr_date;                                       // Variables para obtención de tiempo, hora, texto informativo inferior y nombre log
+  PImage logoPLANTHY, logoUPM, logoETSIT, logoTFB, logoPHOTONPEDIA;  // Creamos un objeto para cargar una imagen 
 
   //Arrays pintar graficas
   String[] Date0Hour1Ndvi2;
@@ -140,14 +140,15 @@ void setup() {
   /* SETUP INTERFAZ */
   
       // Creamos interface del tamaño máximo de la pantalla
-      //size(800, 480, P2D);
        fullScreen(P2D);
        
       // Creamos la PImage del logo
-      logoPLANTHY=loadImage("LOGO_PLANTHY.jpg");  // Cargamos imagen en la varibale
-      logoUPM=loadImage("ESCUDO_UPM.png");  // Cargamos imagen en la varibale
-      logoETSIT=loadImage("LOGO_ESCUELA.png");  // Cargamos imagen en la varibale
-    
+      logoPLANTHY = loadImage("LOGO_PLANTHY.jpg");            // Cargamos imagen en la varibale
+      logoUPM = loadImage("ESCUDO_UPM.png");                  // Cargamos imagen en la varibale
+      logoETSIT = loadImage("LOGO_ESCUELA.png");              // Cargamos imagen en la varibale
+      logoTFB = loadImage("LOGO_TFB.png");                    // Cargamos imagen en la varibale
+      logoPHOTONPEDIA = loadImage("Logo_PhotonPedia.png");    // Cargamos imagen en la varibale
+      
       // Creamos las fuentes que vamos a usar
       font1 = loadFont("SansSerif.plain.vlw");
       font2 = loadFont("SansSerif.bold.vlw");
@@ -161,7 +162,6 @@ void setup() {
       nombresX = 450;
       nombresY = 350;
       
-  
   
   /* SETUP BOTONES */
   
