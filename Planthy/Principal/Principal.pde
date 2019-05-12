@@ -188,7 +188,7 @@ void setup() {
       plotNDVI.setPos(25,25);
       plotNDVI.setDim(525,300);
       plotNDVI.setXLim(0,30);
-      plotNDVI.setYLim(-1,1);
+      plotNDVI.setYLim(0,1);
       plotNDVI.getTitle().setText("NDVI");
       plotNDVI.getXAxis().getAxisLabel().setText(" Days ");
       plotNDVI.getYAxis().getAxisLabel().setText("NDVI");
