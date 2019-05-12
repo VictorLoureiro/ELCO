@@ -190,7 +190,7 @@ void setup() {
       plotNDVI.setXLim(0,30);
       plotNDVI.setYLim(-1,1);
       plotNDVI.getTitle().setText("NDVI");
-      plotNDVI.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotNDVI.getXAxis().getAxisLabel().setText(" Days ");
       plotNDVI.getYAxis().getAxisLabel().setText("NDVI");
       plotNDVI.setBoxBgColor(color(211, 242, 247));
      
@@ -201,7 +201,7 @@ void setup() {
       plotHum.setXLim(0,24);
       plotHum.setYLim(0,100);
       plotHum.getTitle().setText("HUMIDITY 24 HOURS");
-      plotHum.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotHum.getXAxis().getAxisLabel().setText(" Hours ");
       plotHum.getYAxis().getAxisLabel().setText("Humidity (%)");
       plotHum.setBoxBgColor(color(211, 242, 247));
       
@@ -212,7 +212,7 @@ void setup() {
       plotHum7.setXLim(0,7);
       plotHum7.setYLim(0,100);
       plotHum7.getTitle().setText("HUMIDITY 7 DAYS");
-      plotHum7.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotHum7.getXAxis().getAxisLabel().setText(" Days ");
       plotHum7.getYAxis().getAxisLabel().setText("Humidity (%)");
       plotHum7.setBoxBgColor(color(211, 242, 247));
       
@@ -223,7 +223,7 @@ void setup() {
       plotHum30.setXLim(0,30);
       plotHum30.setYLim(0,100);
       plotHum30.getTitle().setText("HUMIDITY 30 DAYS");
-      plotHum30.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotHum30.getXAxis().getAxisLabel().setText(" Days ");
       plotHum30.getYAxis().getAxisLabel().setText("Humidity (%)");
       plotHum30.setBoxBgColor(color(211, 242, 247));
       
@@ -234,7 +234,7 @@ void setup() {
       plotTemp.setXLim(0,24);
       plotTemp.setYLim(-10,80);
       plotTemp.getTitle().setText("TEMPERATURE 24 HOURS");
-      plotTemp.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotTemp.getXAxis().getAxisLabel().setText(" Hours ");
       plotTemp.getYAxis().getAxisLabel().setText("Temperature (ºC)");
       plotTemp.setBoxBgColor(color(211, 242, 247));
       
@@ -245,7 +245,7 @@ void setup() {
       plotTemp7.setXLim(0,7);
       plotTemp7.setYLim(-10,80);
       plotTemp7.getTitle().setText("TEMPERATURE 7 DAYS");
-      plotTemp7.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotTemp7.getXAxis().getAxisLabel().setText(" Days ");
       plotTemp7.getYAxis().getAxisLabel().setText("Temperature (ºC)");
       plotTemp7.setBoxBgColor(color(211, 242, 247));
       
@@ -256,7 +256,7 @@ void setup() {
       plotTemp30.setXLim(0,30);
       plotTemp30.setYLim(-10,80);
       plotTemp30.getTitle().setText("TEMPERATURE 30 DAYS");
-      plotTemp30.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotTemp30.getXAxis().getAxisLabel().setText(" Days ");
       plotTemp30.getYAxis().getAxisLabel().setText("Temperature (ºC)");
       plotTemp30.setBoxBgColor(color(211, 242, 247));
     
@@ -267,7 +267,7 @@ void setup() {
       plotLuz.setXLim(0,24);
       plotLuz.setYLim(0,100);
       plotLuz.getTitle().setText("LIGHT 24 HOURS");
-      plotLuz.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotLuz.getXAxis().getAxisLabel().setText(" Hours ");
       plotLuz.getYAxis().getAxisLabel().setText("Ligth (%)");
       plotLuz.setBoxBgColor(color(211, 242, 247));
       
@@ -278,7 +278,7 @@ void setup() {
       plotLuz7.setXLim(0,7);
       plotLuz7.setYLim(0,100);
       plotLuz7.getTitle().setText("LIGHT 7 DAYS");
-      plotLuz7.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotLuz7.getXAxis().getAxisLabel().setText(" Days ");
       plotLuz7.getYAxis().getAxisLabel().setText("Ligth (%)");
       plotLuz7.setBoxBgColor(color(211, 242, 247));
       
@@ -289,7 +289,7 @@ void setup() {
       plotLuz30.setXLim(0,30);
       plotLuz30.setYLim(0,100);
       plotLuz30.getTitle().setText("LIGHT 30 DAYS");
-      plotLuz30.getXAxis().getAxisLabel().setText(" Time (s)");
+      plotLuz30.getXAxis().getAxisLabel().setText(" Days ");
       plotLuz30.getYAxis().getAxisLabel().setText("Ligth (%)");
       plotLuz30.setBoxBgColor(color(211, 242, 247));
   
